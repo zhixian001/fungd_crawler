@@ -1,5 +1,5 @@
 @echo off
 :_loop
-".py 파일 경로"
+python .\fungd_crawler\tchang.py .\output.txt
 pause
 goto _loop
