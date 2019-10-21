@@ -7,7 +7,7 @@ import argparse
 import requests
 from bs4 import BeautifulSoup
 
-from fungd_crawler.article_class import Article
+from .article_class import Article
 
 sys.setrecursionlimit(10000)
 
