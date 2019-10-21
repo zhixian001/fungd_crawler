@@ -1,5 +1,5 @@
 @echo off
 :_loop
-python .\fungd_crawler\tchang.py .\output.txt
+python .\run.py .\output.txt
 pause
 goto _loop

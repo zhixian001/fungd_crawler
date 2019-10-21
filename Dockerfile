@@ -6,12 +6,13 @@ COPY . .
 
 ENV OUTPUT_FILE_NAME=output.txt
 
+VOLUME [ "/output" ]
+
 RUN pip3 install -r requirements.txt && \
     chmod ug+x ./linux_launch.sh && \
     mkdir /output && \
-    mv ./output.txt /output/output.txt
+    mv "./${OUTPUT_FILE_NAME}" "/output/${OUTPUT_FILE_NAME}"
 
-VOLUME [ "/output" ]
 
 ENTRYPOINT [ "sh", "-c" ]
 # entrypoint script's arg
