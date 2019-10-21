@@ -8,3 +8,5 @@ services:
       labels:
         - "com.example.description=tgd crawler"
     tty: true
+    environment: 
+      - OUTPUT_FILE_NAME=output.txt

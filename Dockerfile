@@ -4,6 +4,8 @@ WORKDIR /crawler
 
 COPY . .
 
+ENV OUTPUT_FILE_NAME=output.txt
+
 RUN pip3 install -r requirements.txt && \
     chmod ug+x ./linux_launch.sh && \
     mkdir /output && \
@@ -11,4 +13,6 @@ RUN pip3 install -r requirements.txt && \
 
 VOLUME [ "/output" ]
 
-ENTRYPOINT [ "./linux_launch.sh" ]
+ENTRYPOINT [ "sh", "-c" ]
+# entrypoint script's arg
+CMD [ "./linux_launch.sh", "/output/${OUTPUT_FILE_NAME}"]
