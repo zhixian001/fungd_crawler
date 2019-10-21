@@ -24,7 +24,7 @@ def get_item_list(page=1):
 if __name__ == "__main__":
     # 인자 파싱 
     parser = argparse.ArgumentParser(description="Fungd crawler")
-    parser.add_argument('outputfile', metavar='FILEPATH', type=str, help="크롤링에 사용할 파일의 경로", required=True)
+    parser.add_argument('outputfile', metavar='FILEPATH', type=str, help="크롤링에 사용할 파일의 경로")
     parser.add_argument("-N", "--new-output-file", type=int, help="옵션 활성화 시 output파일을 주어진 정수 값으로 새로 만듭니다.", default=10, required=False)
     parser.add_argument("-f", "--force" , action='store_true', help="이 옵션을 사용하면 output 파일이 이미 존재하더라도 새 파일을 만들어 덮어씁니다. -N 옵션이 없으면 아무런 효과가 없습니다.", required=False)
 
