@@ -10,10 +10,8 @@ VOLUME [ "/output" ]
 
 RUN pip3 install -r requirements.txt && \
     chmod ug+x ./linux_launch.sh && \
-    mkdir /output && \
     mv "./${OUTPUT_FILE_NAME}" "/output/${OUTPUT_FILE_NAME}"
 
 
-ENTRYPOINT [ "sh", "-c" ]
-# entrypoint script's arg
-CMD [ "./linux_launch.sh", "/output/${OUTPUT_FILE_NAME}"]
+ENTRYPOINT [ "./linux_launch.sh" ]
+
